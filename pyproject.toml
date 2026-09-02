@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "codegraph"
+version = "0.1.0"
+description = "A lightweight GraphRAG static analysis and retrieval tool for Python codebases."
+requires-python = ">=3.9"
+dependencies = [
+    "sentence-transformers>=2.2.0",
+    "litellm>=1.0.0",
+    "fastapi>=0.100.0",
+    "uvicorn>=0.20.0",
+    "numpy",
+    "pathspec"
+]
+
+[project.scripts]
+
+codegraph = "codegraph.cli.main:main"
+
+[tool.setuptools.packages.find]
+
+include = ["codegraph*"]
+
+[tool.setuptools.package-data]
+
+codegraph = [
+    "ui/dist/**/*"
+]

@@ -1,0 +1,21 @@
+test_codebase/
+build_commands.txt
+
+# Python build artifacts
+build/
+/dist/
+*.egg-info/
+*.egg
+
+# Python cache & environments
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Databases
+*.db
+
+# Frontend / UI
+node_modules/
+.npm/
